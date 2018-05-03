@@ -1,0 +1,42 @@
+<!--<pre>{{dataTable | json}}</pre>-->
+<div>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Station</th>
+      <th>#vélos actuel</th>
+      <th>Action</th>
+      <th>#vélos à charger/déposer</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let line of dataTable.tab">
+      <td>
+        <select class="form-control" [(ngModel)]="line.station">
+          <option *ngFor="let station of dataTable.listStation" [value]="station.id">
+            {{station.name}}
+          </option>
+        </select>
+      </td>
+      <td>
+        {{line.amountBicycle}}
+      </td>
+      <td>
+        <select class="form-control" [(ngModel)]="line.action">
+          <option *ngFor="let action of dataTable.listAction" [value]="action.id">
+            {{action.name}}
+          </option>
+        </select>
+      </td>
+      <td>
+        <input class="form-control" type="number" [(ngModel)]="line.nbBicycle" max="10" min="0">
+      </td>
+      <td>
+        <button class="btn btn-danger" (click)="deleteRecord(line)">Supprimer</button>
+      </td>
+    </tr>
+    <button class="btn btn-primary" (click)="addRecord()">Ajouter</button>
+  </tbody>
+</table>
+</div>

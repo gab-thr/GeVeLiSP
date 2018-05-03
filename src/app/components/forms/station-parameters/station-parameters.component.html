@@ -1,0 +1,45 @@
+<!--<pre>{{dataAll | json}}</pre>-->
+
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">Station Selectionnée</h5>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label>Nom de la station</label>
+          <select [(ngModel)]="dataAll.station" class="form-control">
+            <option *ngFor="let station of dataAll.listStation" [value]="station.value">
+              {{station.name}}
+            </option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Zone</label>
+          <select [(ngModel)]="dataAll.area" class="form-control">
+            <option *ngFor="let zone of dataAll.listZone" [value]="zone.value">
+              {{zone.name}}
+            </option>
+          </select>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" [(ngModel)]="dataAll.inorder">
+          <label class="form-check-label">En service</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" [(ngModel)]="dataAll.alerts">
+          <label class="form-check-label">Générer des alertes</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" [(ngModel)]="dataAll.rebablancing">
+          <label class="form-check-label">Pris en compte pour équilibrage</label>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <app-bike-terminal-parameters [data]="dataAll"></app-bike-terminal-parameters>
+      </div>
+    </div>
+    <button type="button" class="btn btn-primary">Sauver</button>
+  </div>
+    <!--<input class="btn btn-secondary" type="reset" value="Réinitialiser">-->
+</div>
+

@@ -1,0 +1,7 @@
+<!--<pre>{{data | json}}</pre>-->
+<div>
+  <h4>Equipes</h4>
+  <app-table [colTitles]="colTitles" [data]="data.tab1"></app-table>
+  <app-create-mission-form [dataForm]="data"></app-create-mission-form>
+  <button type="button" class="btn btn-secondary" routerLink="/missions">retour</button>
+</div>

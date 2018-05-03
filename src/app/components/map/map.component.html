@@ -1,0 +1,23 @@
+<agm-map [latitude]=lat [longitude]=lng [zoom]=zoomLevel>
+  <agm-marker *ngFor="let station of listStation" [latitude] = "station.lat" [longitude] = "station.lng" label={{station.id}}>
+      <agm-snazzy-info-window [maxWidth]="200" [closeWhenOthersOpen]="true">
+        <ng-template>
+          {{station.chart}}
+        </ng-template>
+      </agm-snazzy-info-window>
+  </agm-marker>
+</agm-map>
+
+
+
+<!--<agm-map [latitude] = "lat" [longitude]="lng" [zoom] = "zoomLevel">-->
+  <!--<agm-marker [latitude]="lat" [longitude]="lng" label = "1">-->
+    <!--<agm-snazzy-info-window [maxWidth]="200" [closeWhenOthersOpen]="true">-->
+      <!--<ng-template>-->
+        <!--My first Snazzy Info Window!-->
+      <!--</ng-template>-->
+    <!--</agm-snazzy-info-window>-->
+  <!--</agm-marker>-->
+<!--</agm-map>-->
+
+

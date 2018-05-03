@@ -1,0 +1,17 @@
+<!--<pre>{{data | json}}</pre>-->
+<div class="col-10">
+  <h3 class="text-center">Mission en cours</h3>
+</div>
+<br>
+
+<app-mission-start [data]="data"></app-mission-start>
+
+<app-mission-task *ngFor="let task of data.tasks" [task]="task"></app-mission-task>
+
+<!--<app-mission-start [title]="end" [load]="finalLoad" [amountBicycle]="finalAmount"></app-mission-start>-->
+<div class=" col-10 text-center">
+  <button type="button" class="btn btn-success" routerLink="/velospotterHome">Finaliser mission</button>
+</div>
+<br>
+
+

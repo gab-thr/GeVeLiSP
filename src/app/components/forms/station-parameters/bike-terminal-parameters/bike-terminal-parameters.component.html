@@ -1,0 +1,36 @@
+<!--<pre>{{data | json}}</pre>-->
+
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">Bornes</h5>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-group">
+          <label>Période</label>
+          <select [(ngModel)]="data.period" class="form-control">
+            <option *ngFor="let period of listPeriod" [value]="period.value">
+              {{period.name}}
+            </option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Quantité vélos idéale</label>
+          <input class="form-control" type="number" value="0" [(ngModel)]="data.qIdeal" min="0" max="10">
+        </div>
+        <div class="form-group">
+          <label>Quantité vélos min.</label>
+          <input class="form-control" type="number" value="0" [(ngModel)]="data.qMin" min="0" max="10">
+        </div>
+        <div class="form-group">
+          <label>Quantité vélos max.</label>
+          <input class="form-control" type="number" value="0" [(ngModel)]="data.qMax" min="0" max="10">
+        </div>
+        <div class="form-group">
+          <label>Quantité vélos alerte</label>
+          <input class="form-control" type="number" value="0" [(ngModel)]="data.qAlert" min="0" max="10">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

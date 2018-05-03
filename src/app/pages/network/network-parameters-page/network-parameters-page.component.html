@@ -1,0 +1,21 @@
+<!--<pre>{{data | json}}</pre>-->
+<div class="card">
+  <div class="card-body">
+    <h3 class="card-title">Paramètres réseau</h3><br>
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Zones</h4>
+        <app-table [colTitles]="colZonesTitles" [data]="data.dataZone"></app-table>
+      </div>
+    </div>
+    <br>
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Périodes</h4>
+        <app-table [colTitles]="colPeriodTitles" [data]="data.dataPeriod"></app-table>
+        <button class="btn btn-primary">Appliquer sélection à toutes les stations</button>
+      </div>
+    </div>
+    <button type="button" class="btn btn-secondary" routerLink="/network">retour</button>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<h1>Home</h1>
+
+<app-map [listStation]="data.listStation" [lat]="data.lat" [lng]="data.lng"></app-map>
+<div class="form-group">
+  <input type="range" class="form-control-range"  min="0" max="24" id="formControlRange">
+</div>
+
+<h3>Missions en cours</h3>
+<app-table [colTitles]="colTitles" [data]="data.tab1"></app-table>
+
+<h3>Missions en attente</h3>
+<app-table [colTitles]="col" [data]="data.tab2"></app-table>

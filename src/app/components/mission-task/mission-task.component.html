@@ -1,0 +1,70 @@
+<div class="row">
+  <div class="col-10">
+    <div class="card mb-3" [class.border-danger]="task.current">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-5">
+            <h4>
+              Aller à {{task.name}}
+            </h4>
+            <div *ngIf="task.loading">
+              <h4>Charger {{task.qtyBikes}} vélo<span *ngIf="task.qtyBikes > 1">s</span></h4>
+            </div>
+            <div *ngIf="!task.loading">
+              <h4>Déposer {{task.qtyBikes}} vélo<span *ngIf="task.qtyBikes > 1">s</span></h4>
+            </div>
+          </div>
+          <div class="col-7">
+            <div class="row">
+              <h4 *ngIf="task.loading">{{task.qtyBikes}}</h4>
+              <img *ngIf="task.loading" class="img-responsive" src="../assets/load.PNG" style="height:150px;width:150px">
+              <img *ngIf="!task.loading" class="img-responsive" src="../assets/unload.PNG" style="height:150px;width:150px">
+              <h4 *ngIf="!task.loading">{{task.qtyBikes}}</h4>
+              <app-mini-map></app-mini-map>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-1">
+    <button type="button" class="btn btn-danger">X</button>
+  </div>
+  <div class="col-1">
+    <button type="button" class="btn btn-success">O</button>
+  </div>
+</div>
+<!--<div class="row">-->
+  <!--<div class="col-10">-->
+    <!--<div class="card mb-3" [class.border-danger]="task.current">-->
+      <!--<div class="card-body">-->
+        <!--<div class="row">-->
+          <!--<div class="col-5">-->
+            <!--<h3>-->
+              <!--Aller à {{task.name}}-->
+            <!--</h3>-->
+            <!--<div *ngIf="task.loading">-->
+              <!--<h3>Charger {{task.qtyBikes}} vélo<span *ngIf="task.qtyBikes > 1">s</span></h3>-->
+            <!--</div>-->
+            <!--<div *ngIf="!task.loading">-->
+              <!--<h3>Déposer {{task.qtyBikes}} vélo<span *ngIf="task.qtyBikes > 1">s</span></h3>-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<div class="col-7">-->
+            <!--<div class="row">-->
+              <!--<img *ngIf="task.loading" class="img-responsive" src="../assets/load.PNG" style="height:150px;width:150px">-->
+              <!--<img *ngIf="!task.loading" class="img-responsive" src="../assets/unload.PNG" style="height:150px;width:150px">-->
+              <!--<app-mini-map></app-mini-map>-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
+  <!--<div class="col-1">-->
+    <!--<button type="button" class="btn btn-danger">X</button>-->
+  <!--</div>-->
+  <!--<div class="col-1">-->
+    <!--<button type="button" class="btn btn-success">O</button>-->
+  <!--</div>-->
+<!--</div>-->

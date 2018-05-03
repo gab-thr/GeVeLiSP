@@ -1,0 +1,30 @@
+<!--<pre>{{data | json}}</pre>-->
+<div>
+  <div class="card">
+    <div class="card-body">
+      <h4 class="card-title">Information sur Equipe</h4>
+      <div class="form-group">
+        <label>Nombre de missions</label>
+        <input type="text" class="form-control" value="{{data.capacityMax}}" readonly>
+      </div>
+      <div class="form-group">
+        <label>ID Carte</label>
+        <input type="text" class="form-control" value="{{data.cardID}}" readonly>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="card">
+    <div class="card-body">
+      <h4 class="card-title">Missions</h4>
+
+      <h5>Mission en cours</h5>
+      <app-table [colTitles]="colTitles" [data]="data.tab1"></app-table>
+
+      <h5>Mission en attente</h5>
+      <app-table [colTitles]="colWaitTitles" [data]="data.tab2"></app-table>
+
+      <app-new-mission-request [data] = data></app-new-mission-request>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,45 @@
+<!--<pre>{{dataForm | json}}</pre>-->
+<h3>Création de mission manuelle</h3>
+
+  <!--<div class="form-group row">-->
+    <!--<label class="col-sm-4 col-form-label">Attribuer mission à</label>-->
+    <!--<div class="col-sm-8">-->
+    <!--<select [(ngModel)]="data.team" class="form-control">-->
+      <!--<option *ngFor="let team of listTeam" [value]="team.value">-->
+        <!--{{team.name}}-->
+      <!--</option>-->
+    <!--</select>-->
+    <!--</div>-->
+  <!--</div>-->
+
+<div class="form-group">
+  <div class="form-group">
+    <label>Attribuer mission à</label>
+    <select [(ngModel)]="dataForm.team" class="form-control">
+      <option *ngFor="let team of dataForm.listTeam" [value]="team.value">
+        {{team.name}}
+      </option>
+    </select>
+  </div>
+</div>
+
+<div class="form-group">
+  <div class="form-group">
+    <label>Durée de validité (minutes)</label>
+    <input type="number" class="form-control" [(ngModel)]="dataForm.timeLimit" min="15" max="60" step="5">
+  </div>
+</div>
+
+<div class="form-check">
+  <input type="checkbox" class="form-check-input" id="exampleCheck1" [(ngModel)]="dataForm.urgent">
+  <label class="form-check-label" for="exampleCheck1" >Mission urgente</label>
+</div>
+
+<app-create-mission-manually-table [dataTable]="dataForm"></app-create-mission-manually-table>
+
+<button type="button" class="btn btn-primary" (click)="create()">Créer</button>
+
+
+
+
+

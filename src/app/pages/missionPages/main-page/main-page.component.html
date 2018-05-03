@@ -1,0 +1,23 @@
+<h1>Missions</h1>
+
+<h3>Mission en cours</h3>
+<app-table [colTitles]="colTab1" [data]="data.tab1"></app-table>
+
+<h3>Mission en attente</h3>
+<app-table [colTitles]="colTitles" [data]="data.tab2"></app-table>
+
+<h3>Historique des missions</h3>
+<app-table [colTitles]="colHistoryTitles" [data]="data.tab3"></app-table>
+
+<div class="card text-center">
+  <div class="card-body">
+    <h5 class="card-title">Management des missions</h5>
+    <button type="button" class="btn btn-primary" routerLink="/missions/queries">
+      Nouvelle requête
+    </button>
+
+    <button type="button" class="btn btn-secondary" routerLink="/missions/create">
+      Création manuelle
+    </button>
+  </div>
+</div>

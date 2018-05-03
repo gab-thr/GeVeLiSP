@@ -1,0 +1,30 @@
+<!--<pre>{{dataForm | json}}</pre>-->
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">Création Missions</h5>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label>Nombre de missions</label>
+          <input type="text" class="form-control" value="{{dataForm.missionAmount}}" readonly>
+        </div>
+        <div class="form-group">
+          <label>Durée de validité (minutes)</label>
+          <input type="number" class="form-control" [(ngModel)]="dataForm.timeLimit" min="15" max="60" step="5">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label>Zone</label>
+        <select [(ngModel)]="dataForm.area" class="form-control">
+          <option *ngFor="let zone of listZone" [value]="zone.value">{{zone.name}}</option>
+        </select>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1" [(ngModel)]="dataForm.urgent">
+          <label class="form-check-label" for="exampleCheck1" >Mission urgente</label>
+        </div>
+      </div>
+    </div>
+    <button type="button" class="btn btn-primary" (click)="create()">Créer</button>
+  </div>
+</div>
+
