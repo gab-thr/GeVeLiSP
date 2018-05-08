@@ -1,0 +1,22 @@
+/*nav {*/
+  /*background-color: #7D151A;*/
+  /*color: #ffffff;*/
+  /*font-family: Helvetica;*/
+/*}*/
+
+/*a {*/
+  /*text-decoration: none;*/
+  /*color: #ffffff;*/
+/*}*/
+
+.navbar-brand {
+  color: aliceblue !important;
+}
+
+.is-active {
+  color: aliceblue !important;
+}
+
+.log {
+  color: aliceblue;
+}

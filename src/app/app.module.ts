@@ -45,6 +45,7 @@ import { SuperUserHomePageComponent } from './pages/super-user-home-page/super-u
 import { CreateAccountPageComponent } from './pages/create-account-page/create-account-page.component';
 import { VeloSpotterHomePageComponent } from './pages/velo-spotter-home-page/velo-spotter-home-page.component';
 import { CurrentMissionPageComponent } from './pages/current-mission-page/current-mission-page.component';
+import {ResponsiveModule} from 'ng2-responsive';
 
 
 @NgModule({
@@ -93,7 +94,8 @@ import { CurrentMissionPageComponent } from './pages/current-mission-page/curren
     NgbModule,
     AppRoutingModule,
     MultiSelectModule,
-    ChartModule
+    ChartModule,
+    ResponsiveModule
   ],
   providers: [],
   bootstrap: [AppComponent]

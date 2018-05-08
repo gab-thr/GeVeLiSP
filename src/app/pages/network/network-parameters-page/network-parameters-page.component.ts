@@ -10,9 +10,9 @@ export class NetworkParametersPageComponent implements OnInit {
   colZonesTitles = ['#équipes', 'Nom', '#stations', 'Sélection stations'];
   colPeriodTitles = ['Nom', 'Date début', 'Date fin', '#vélos min', '#vélos max', '#vélos idéal', '#vélos alerte', ' '];
 
-  @Input() data = {
+  data = {
     dataZone: [
-      [2, 'Zone A', 26, {select : true}],
+      [2, 'Zone A', 27, {select : true}],
       [2, 'Zone B', 26, {select : true}],
       [3, 'Zone A', 18, {select : true}],
       [3, 'Zone B', 18, {select : true}],

@@ -10,7 +10,8 @@ import {SelectItem} from 'primeng/api';
 export class ComboDropdownComponent implements OnInit {
 
   areas1: SelectItem[];
-
+  @Input() test: string;
+  // @Input() data: any;
   @Input() data: any = {
     areas1: [
       {label: '(1) - Zone A', value: 'zoneA'},
@@ -23,10 +24,14 @@ export class ComboDropdownComponent implements OnInit {
   };
 
   constructor() {
-    this.areas1 = this.data.areas1;
+
+
   }
 
   ngOnInit() {
+    if (this.data) {
+      this.areas1 = this.data.areas1;
+    }
   }
 
 }

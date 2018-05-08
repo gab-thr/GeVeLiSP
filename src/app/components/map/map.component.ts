@@ -17,7 +17,7 @@ export class MapComponent implements OnInit {
     {id: 2, name: 'Pérolle', lat: 46.79342039999999, lng: 7.159071199999971, chart: [[5, 6, 7], [17, 180, 5]]},
     {id: 3, name: 'Cathédrale St-Nicolas', lat: 46.80599949272003, lng: 7.16367474169715, chart: [[3, 1, 9], [12, .321, 78]]},
     {id: 4, name: 'Université de Fribourg', lat: 46.80620271974984, lng: 7.153754041875345, chart: [[9, 4, 6], [687, 17, 65]]}
-  ]
+  ];
 
   constructor() { }
 
