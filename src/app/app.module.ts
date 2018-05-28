@@ -31,7 +31,6 @@ import { MultiSelectModule } from 'primeng/primeng';
 import { ChartModule } from 'primeng/chart';
 import { MapChartComponent } from './components/map-chart/map-chart.component';
 
-
 import { AppRoutingModule } from './/app-routing.module';
 import { TeamPageComponent } from './pages/team-page/team-page.component';
 import { AlertsPageComponent } from './pages/alerts-page/alerts-page.component';
@@ -46,6 +45,10 @@ import { CreateAccountPageComponent } from './pages/create-account-page/create-a
 import { VeloSpotterHomePageComponent } from './pages/velo-spotter-home-page/velo-spotter-home-page.component';
 import { CurrentMissionPageComponent } from './pages/current-mission-page/current-mission-page.component';
 import {ResponsiveModule} from 'ng2-responsive';
+import { NetworkParametersEditPeriodPageComponent } from './pages/network/network-parameters-page/network-parameters-edit-period-page/network-parameters-edit-period-page.component';
+import { EditNetworkPeriodParametersComponent } from './components/forms/edit-network-period-parameters/edit-network-period-parameters.component';
+import {LoginService} from './login.service';
+import {NavbarService} from './navbar.service';
 
 
 @NgModule({
@@ -82,7 +85,9 @@ import {ResponsiveModule} from 'ng2-responsive';
     MissionTaskComponent,
     MiniMapComponent,
     MissionStartComponent,
-    MapChartComponent
+    MapChartComponent,
+    NetworkParametersEditPeriodPageComponent,
+    EditNetworkPeriodParametersComponent
   ],
   imports: [
     FormsModule,
@@ -97,7 +102,10 @@ import {ResponsiveModule} from 'ng2-responsive';
     ChartModule,
     ResponsiveModule
   ],
-  providers: [],
+  providers: [
+    LoginService,
+    NavbarService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

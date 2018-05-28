@@ -12,7 +12,7 @@ export class MapChartComponent implements OnInit {
       label: 'Prédictions',
       backgroundColor: '#42A5F5',
       borderColor: '#1E88E5',
-      data: [14, 10, 8, 7, 2, 2, 0]
+      data: [2, 5, 8, 12, 7, 2, 0]
     }
   ];
 

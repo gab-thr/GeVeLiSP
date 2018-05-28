@@ -11,28 +11,35 @@ export class TableComponent implements OnInit {
   // @Input() colTitles = ['Mission ID', 'Type', 'Equipe', 'Zone', 'Complétion(durée restante approx.)', 'débutée à'];
   @Input() data: any;
   // @Input() data = [
-  //   ['1', 'Standard', 'Equipe B', '-', '50% (60 min)', '9:12'],
-  //   ['2', 'Urgente', 'Equipe D', '-', '30% (80 min)', '9:20']
+  //   ['1', 'Standard', 'Equipe B', '-', '50% (60 min)', {select: false}],
+  //   ['2', 'Urgente', 'Equipe D', '-', '30% (80 min)', {select: false}]
   // ];
+
+  areas: SelectItem[];
+
   dataSelect: any = {
-    areas1: [
-      {label: '(1) - Zone A', value: 'zoneA'},
-      {label: '(2) - Zone B', value: 'zoneB'},
-      {label: '(3) - Zone C', value: 'zoneC'},
-      {label: '(4) - Zone D', value: 'zoneD'},
-      {label: '(5) - Zone G', value: 'zoneE'}
+    listAreas: [
+      {label: '(1) - Station A', value: 'station A'},
+      {label: '(2) - Station B', value: 'station B'},
+      {label: '(3) - Station C', value: 'station C'},
+      {label: '(4) - Station D', value: 'station D'},
+      {label: '(5) - Station E', value: 'station E'}
     ],
-    selectedAreas1: []
+    areas: this.areas
   };
 
   deleteRecord(item) {
     this.data.splice(this.data.indexOf(item), 1);
   }
 
+
+
   constructor() {
   }
 
   ngOnInit() {
+    if (this.data) {
+      this.dataSelect.areas = this.dataSelect.listAreas;
+    }
   }
-
 }

@@ -1,6 +1,17 @@
 <!--<pre>{{data | json}}</pre>-->
-<div>
-  <app-map [listStation]="data.listMarker" [lat]="data.lat" [lng]="data.lng"></app-map>
-  <button class="btn btn-secondary" routerLink="/network/parameters">Paramètres</button>
-  <app-station-parameters [dataAll]="data"></app-station-parameters>
+<div class="row">
+  <div class="col-12">
+    <app-map [listStation]="data.listMarker" [lat]="data.lat" [lng]="data.lng"></app-map>
+  </div>
+</div>
+<div class="row">
+  <div class="col-6"></div>
+  <div class="col-6">
+    <button class="btn btn-secondary" style="float: right" routerLink="/network/parameters">Paramètres avancés</button>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12">
+    <app-station-parameters [dataAll]="data"></app-station-parameters>
+  </div>
 </div>

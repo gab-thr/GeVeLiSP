@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { LoginService, User } from '../../../login.service';
+import { NavbarService } from '../../../navbar.service';
 
 @Component({
   selector: 'app-login-form',
@@ -7,21 +9,46 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginFormComponent implements OnInit {
 
+  public user = new User('', '' );
+  public errorMsg = '';
+
   title ='GEVELISP';
-  username: string;
-  password: string;
+  // username: string;
+  // u1 = 'superuser';
+  // password: string;
+  //
+  // @Input() show;
+  //
+  // data: any = {
+  //   show: this.show
+  // };
+  //
+  // constructor() { }
+  //
+  // onLogin(username) {
+  //   this.username = username;
+  //   // this.password = password;
+  //   if (username === this.u1) {
+  //     this.data.show = true;
+  //   }
+  // }
+  //
+  ngOnInit() {
 
-  data: any = {};
-
-  constructor() { }
-
-  onLogin(username, password) {
-    this.username = username;
-    this.password = password;
-    /* TODO: route to page*/
   }
 
-  ngOnInit() {
+
+  constructor(
+    private _service: LoginService, public nav: NavbarService) {
+    nav.hideCA();
+    nav.hideSU();
+    nav.hideVS();
+  }
+
+  login() {
+    if (!this._service.login(this.user)) {
+      this.errorMsg = 'Failed to login';
+    }
   }
 
 }

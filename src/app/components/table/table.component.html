@@ -9,11 +9,11 @@
   <tbody>
   <tr *ngFor="let row of data">
     <td *ngFor="let col of row">
-      <div *ngIf="col.value == null && col.edit == null && col.mission == null && col.okBtn == null && col.select == null">
+      <div *ngIf="col.value == null && col.edit == null && col.mission == null && col.okBtn == null && col.select == null && col.done == null && col.editPeriod == null && col.delete == null">
         {{col}}
       </div>
       <div *ngIf="col.value != null">
-        <input class="form-check-input" type="checkbox" [checked]="col.value" (change)="col.value = !col.value">
+        <input class="form-check-input mx-auto" type="checkbox" [checked]="col.value" (change)="col.value = !col.value">
       </div>
       <div *ngIf="col.edit != null" class="btn-group" role="group">
         <button type="button" class="btn btn-link" routerLink="/editAccount">éditer</button>
@@ -23,11 +23,20 @@
         <button type="button" class="btn btn-secondary" routerLink=''>attribuer mission</button>
       </div>
       <div *ngIf="col.okBtn != null" class="btn-group" role="group">
-        <button type="button" class="btn btn-secondary">OK</button>
+        <button type="button" class="btn btn-secondary" [disabled]="!col.okBtn">OK</button>
       </div>
       <div *ngIf="col.select != null" class="btn-group" role="group">
-        <app-combo-dropdown></app-combo-dropdown>
-        <!--[data]="dataSelect"-->
+        <app-combo-dropdown [listAreas]="dataSelect.listAreas"></app-combo-dropdown>
+      </div>
+      <div *ngIf="col.done != null">
+        <input class="form-check-input mx-auto" type="checkbox" [checked]="col.done" disabled>
+      </div>
+      <div *ngIf="col.delete != null">
+        <button type="button" class="btn btn-link" (click)="deleteRecord(row)">supprimer</button>
+      </div>
+      <div *ngIf="col.editPeriod != null" class="btn-group" role="group">
+        <button type="button" class="btn btn-link" routerLink="/network/parameters/editPeriod">éditer</button>
+        <button type="button" class="btn btn-link" (click)="deleteRecord(row)">supprimer</button>
       </div>
     </td>
   </tr>

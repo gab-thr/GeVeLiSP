@@ -2,5 +2,15 @@
 <div>
   <h4>Equipes</h4>
   <app-table [colTitles]="colTitles" [data]="data.tab"></app-table>
-  <app-create-team-form [dataForm]="data"></app-create-team-form>
+  <button class="btn btn-primary" (click)="addAccount()">Ajouter</button>
+  <div class="card" *ngIf="data.hide">
+    <div class="card-body">
+      <app-create-team-form [dataForm]="data"></app-create-team-form>
+      <div class="text-center">
+        <button type="button" class="btn btn-primary" (click)="createTeam()">Créer</button>
+      </div>
+      <!--<input class="btn btn-secondary" type="reset" value="Réinitialiser">-->
+    </div>
+  </div>
+
 </div>

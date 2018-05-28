@@ -3,3 +3,8 @@
   top: 40%;
   transform: translate(-50%, -50%);
 }
+
+.card {
+  border-style: solid;
+  border-width: thick;
+}

@@ -1,0 +1,50 @@
+<!--<pre>{{dataForm | json}}</pre>-->
+
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">Modification de la période</h5>
+
+    <div class="row">
+      <div class="col-12">
+
+        <div class="form-group">
+          <label> Nom </label>
+          <input type="text" class="form-control" [(ngModel)]="dataForm.period.name">
+        </div>
+
+        <div class="form-group">
+          <label> Date de début </label>
+          <input type="text" class="form-control" [(ngModel)]="dataForm.period.start">
+        </div>
+
+        <div class="form-group">
+          <label> Date de fin </label>
+          <input type="text" class="form-control" [(ngModel)]="dataForm.period.end">
+        </div>
+
+        <div class="form-group">
+          <label>#vélos min</label>
+          <input type="number" class="form-control" min="0" [(ngModel)]="dataForm.period.min">
+        </div>
+
+        <div class="form-group">
+          <label>#vélos max</label>
+          <input type="number" class="form-control" min="0" [(ngModel)]="dataForm.period.max">
+        </div>
+
+        <div class="form-group">
+          <label>#vélos idéal</label>
+          <input type="number" class="form-control" min="0" [(ngModel)]="dataForm.period.ideal">
+        </div>
+
+        <div class="form-group">
+          <label>#vélos alerte</label>
+          <input type="number" class="form-control" min="0" [(ngModel)]="dataForm.period.alert">
+        </div>
+      </div>
+    </div>
+    <div class="text-center">
+      <button type="button" class="btn btn-primary" routerLink="/network/parameters">Enregistrer</button>
+    </div>
+  </div>
+</div>

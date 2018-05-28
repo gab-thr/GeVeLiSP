@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {LoginService} from '../../login.service';
 
 @Component({
   selector: 'app-home-page',
@@ -30,10 +31,11 @@ export class HomePageComponent implements OnInit {
     lng: 7.159071199999971
   };
 
-  constructor() {
+  constructor(private _service: LoginService) {
   }
 
   ngOnInit() {
+    this._service.checkCredentials();
   }
 
 }

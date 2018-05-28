@@ -15,6 +15,8 @@ import {CreateAccountPageComponent} from './pages/create-account-page/create-acc
 import {VeloSpotterHomePageComponent} from './pages/velo-spotter-home-page/velo-spotter-home-page.component';
 import {CurrentMissionPageComponent} from './pages/current-mission-page/current-mission-page.component';
 import {LoginPageComponent} from './pages/login-page/login-page.component';
+import { NetworkParametersEditPeriodPageComponent} from './pages/network/network-parameters-page/network-parameters-edit-period-page/network-parameters-edit-period-page.component';
+
 
 const routes: Routes = [
   {path: '', redirectTo: '/login', pathMatch: 'full'},
@@ -28,6 +30,7 @@ const routes: Routes = [
   {path: 'missions/queries', component: MissionRequestPageComponent},
   {path: 'missions/create', component: CreateMissionManuallyPageComponent},
   {path: 'network/parameters', component: NetworkParametersPageComponent},
+  {path: 'network/parameters/editPeriod', component: NetworkParametersEditPeriodPageComponent},
   // superUserPages
   {path: 'superUserHome', component: SuperUserHomePageComponent},
   {path: 'createAccounts', component: CreateAccountPageComponent},

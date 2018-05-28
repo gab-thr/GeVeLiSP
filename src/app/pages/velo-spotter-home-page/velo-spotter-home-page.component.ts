@@ -15,7 +15,7 @@ export class VeloSpotterHomePageComponent implements OnInit {
 
   data = {
     listZone: [
-      {name: 'Sélectionner une station'},
+      {name: 'Sélectionner une zone'},
       {name: 'Zone A', value: 'zoneA'},
       {name: 'Zone B', value: 'zoneB'},
       {name: 'Zone C', value: 'zoneC'},
@@ -28,7 +28,10 @@ export class VeloSpotterHomePageComponent implements OnInit {
       [84, 'Urgente', 'Equipe C', 'Zone C', '2h', '2', {okBtn: false}]
     ],
     capacityMax: 3,
-    cardID: 547168
+    cardsID: [
+      547168, 46715, 13645
+    ]
+
   };
 
 

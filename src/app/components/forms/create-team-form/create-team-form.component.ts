@@ -13,23 +13,16 @@ export class CreateTeamFormComponent implements OnInit {
   password: string;
 
   @Input() dataForm: any = {
-    createdTeam: {
-      teamName: '',
-      cardID: '',
-      capacity: '',
-      password: ''
-    }
+    // createdTeam: {
+    //   teamName: '',
+    //   cardID: '',
+    //   capacity: '',
+    //   password: ''
+    // }
   };
 
   constructor() { }
 
-  createTeam(teamName, cardID, capacity, password) {
-    this.teamName = teamName;
-    this.cardID = cardID;
-    this.capacity = capacity;
-    this.password = password;
-    /*TODO confirm new team creation*/
-  }
   ngOnInit() {
   }
 

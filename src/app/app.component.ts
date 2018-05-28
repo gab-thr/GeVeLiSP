@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {LoginFormComponent} from './components/forms/login-form/login-form.component';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  show =  false;
 }

@@ -1,5 +1,22 @@
 <!--<pre>{{data | json}}</pre>-->
 <div>
-  <h3>Comptes</h3>
+  <div class="row">
+    <div class="col-6">
+      <h3>Home</h3>
+    </div>
+    <div class="col-6">
+      <button type="button" class="btn btn-secondary" style="float: right" routerLink="/createAccounts">Créer compte</button>
+    </div>
+  </div>
   <app-table [colTitles]="colTitles" [data]="data.listAccounts"></app-table>
+
+  <nav>
+    <ul class="pagination justify-content-center">
+      <li class="page-item"><a class="page-link">Précédent</a></li>
+      <li class="page-item"><a class="page-link">1</a></li>
+      <li class="page-item"><a class="page-link">2</a></li>
+      <li class="page-item"><a class="page-link">3</a></li>
+      <li class="page-item"><a class="page-link">Suivant</a></li>
+    </ul>
+  </nav>
 </div>

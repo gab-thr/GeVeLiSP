@@ -76,13 +76,74 @@
   <!--</div>-->
 <!--</nav>-->
 
-<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+<!--*ngIf="nav-link === is-active"-->
+
+<!--<nav class="navbar navbar-expand-md navbar-dark bg-dark" >-->
+  <!--<a class="navbar-brand">Gevelisp</a>-->
+  <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">-->
+    <!--<span class="navbar-toggler-icon"></span>-->
+  <!--</button>-->
+  <!--<div class="collapse navbar-collapse" id="navbarsExample04">-->
+    <!--<ul class="navbar-nav mr-auto">-->
+      <!--<li class="nav-item">-->
+        <!--<a class="nav-link" routerLink="/home" [routerLinkActive]="['is-active']">Home</a>-->
+      <!--</li>-->
+      <!--<li class="nav-item">-->
+        <!--<a class="nav-link" routerLink="/predictions" [routerLinkActive]="['is-active']">Prédictions</a>-->
+      <!--</li>-->
+      <!--<li class="nav-item">-->
+        <!--<a class="nav-link" routerLink="/missions" [routerLinkActive]="['is-active']">Missions</a>-->
+      <!--</li>-->
+      <!--&lt;!&ndash;<li class="nav-item dropdown">&ndash;&gt;-->
+        <!--&lt;!&ndash;<a class="nav-link dropdown-toggle" routerLink="/missions" [routerLinkActive]="['is-active']" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"[routerLinkActive]="['is-active']">Missions</a>&ndash;&gt;-->
+        <!--&lt;!&ndash;<div class="dropdown-menu" aria-labelledby="dropdown04">&ndash;&gt;-->
+          <!--&lt;!&ndash;<a class="dropdown-item" routerLink="/missions">Missions</a>&ndash;&gt;-->
+          <!--&lt;!&ndash;<a class="dropdown-item" routerLink="/missions/queries">Nouvelle requete</a>&ndash;&gt;-->
+          <!--&lt;!&ndash;<a class="dropdown-item" routerLink="/missions/create">Création manuelle</a>&ndash;&gt;-->
+        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+      <!--&lt;!&ndash;</li>&ndash;&gt;-->
+      <!--<li class="nav-item">-->
+        <!--<a class="nav-link" routerLink="/teams" [routerLinkActive]="['is-active']">Equipes</a>-->
+      <!--</li>-->
+      <!--<li class="nav-item">-->
+        <!--<a class="nav-link" routerLink="/network" [routerLinkActive]="['is-active']">Réseau</a>-->
+      <!--</li>-->
+      <!--<li class="nav-item">-->
+        <!--<a class="nav-link" routerLink="/alerts" [routerLinkActive]="['is-active']">Alertes</a>-->
+      <!--</li>-->
+      <!--<li class="nav-item">-->
+        <!--<a class="nav-link" routerLink="/superUserHome" [routerLinkActive]="['is-active']">SU Home</a>-->
+      <!--</li>-->
+      <!--<li class="nav-item">-->
+        <!--<a class="nav-link" routerLink="/createAccounts" [routerLinkActive]="['is-active']">Création Compte</a>-->
+      <!--</li>-->
+      <!--<li class="nav-item">-->
+        <!--<a class="nav-link" routerLink="/velospotterHome" [routerLinkActive]="['is-active']">VS Home</a>-->
+      <!--</li>-->
+      <!--<li class="nav-item">-->
+        <!--<a class="nav-link" routerLink="/currentMission" [routerLinkActive]="['is-active']">Mission en cours</a>-->
+      <!--</li>-->
+    <!--</ul>-->
+  <!--</div>-->
+  <!--&lt;!&ndash;TODO créer composant pour personne loggée&ndash;&gt;-->
+  <!--&lt;!&ndash;<div class="log justify-content-end">&ndash;&gt;-->
+    <!--&lt;!&ndash;<div class="row">&ndash;&gt;-->
+      <!--&lt;!&ndash;Logged as ChefAtelier_Bienne&ndash;&gt;-->
+    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+    <!--&lt;!&ndash;<div class="row justify-content-end">&ndash;&gt;-->
+      <!--&lt;!&ndash;Logout&ndash;&gt;-->
+    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+  <!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--</nav>-->
+
+
+<!--NAVBARS COMPTES-->
+<nav *ngIf="nav.visibleCA" class="navbar navbar-expand-md navbar-dark bg-dark" id="su">
   <a class="navbar-brand">Gevelisp</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-
-  <div class="collapse navbar-collapse" id="navbarsExample04">
+  <div class="collapse navbar-collapse">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
         <a class="nav-link" routerLink="/home" [routerLinkActive]="['is-active']">Home</a>
@@ -93,14 +154,6 @@
       <li class="nav-item">
         <a class="nav-link" routerLink="/missions" [routerLinkActive]="['is-active']">Missions</a>
       </li>
-      <!--<li class="nav-item dropdown">-->
-        <!--<a class="nav-link dropdown-toggle" routerLink="/missions" [routerLinkActive]="['is-active']" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"[routerLinkActive]="['is-active']">Missions</a>-->
-        <!--<div class="dropdown-menu" aria-labelledby="dropdown04">-->
-          <!--<a class="dropdown-item" routerLink="/missions">Missions</a>-->
-          <!--<a class="dropdown-item" routerLink="/missions/queries">Nouvelle requete</a>-->
-          <!--<a class="dropdown-item" routerLink="/missions/create">Création manuelle</a>-->
-        <!--</div>-->
-      <!--</li>-->
       <li class="nav-item">
         <a class="nav-link" routerLink="/teams" [routerLinkActive]="['is-active']">Equipes</a>
       </li>
@@ -110,28 +163,40 @@
       <li class="nav-item">
         <a class="nav-link" routerLink="/alerts" [routerLinkActive]="['is-active']">Alertes</a>
       </li>
+    </ul>
+  </div>
+</nav>
+
+<nav *ngIf="nav.visibleSU" class="navbar navbar-expand-md navbar-dark bg-dark" id="ca">
+  <a class="navbar-brand">Gevelisp</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse">
+    <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" routerLink="/superUserHome" [routerLinkActive]="['is-active']">SU Home</a>
+        <a class="nav-link" routerLink="/superUserHome" [routerLinkActive]="['is-active']">Home</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" routerLink="/createAccounts" [routerLinkActive]="['is-active']">Création Compte</a>
       </li>
+    </ul>
+  </div>
+</nav>
+
+<nav *ngIf="nav.visibleVS" class="navbar navbar-expand-md navbar-dark bg-dark" id="vs">
+  <a class="navbar-brand">Gevelisp</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse">
+    <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" routerLink="/velospotterHome" [routerLinkActive]="['is-active']">VS Home</a>
+        <a class="nav-link" routerLink="/velospotterHome" [routerLinkActive]="['is-active']">Home</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" routerLink="/currentMission" [routerLinkActive]="['is-active']">Mission en cours</a>
       </li>
     </ul>
   </div>
-  <!--TODO créer composant pour personne loggée-->
-  <!--<div class="log justify-content-end">-->
-    <!--<div class="row">-->
-      <!--Logged as ChefAtelier_Bienne-->
-    <!--</div>-->
-    <!--<div class="row justify-content-end">-->
-      <!--Logout-->
-    <!--</div>-->
-  <!--</div>-->
 </nav>
-
