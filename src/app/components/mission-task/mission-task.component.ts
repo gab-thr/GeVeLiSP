@@ -7,9 +7,7 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class MissionTaskComponent implements OnInit {
 
-  @Input() task = {
-
-  };
+  @Input() task;
 
   constructor() { }
 

@@ -1,4 +1,6 @@
 <agm-map [latitude]=lat [longitude]=lng [zoom]=zoomLevel>
-  <agm-marker *ngFor="let station of listStation" [latitude] = "station.lat" [longitude] = "station.lng" label={{station.id}}>
-  </agm-marker>
+  <agm-direction *ngFor="let station of listStation" [origin]="station.origin" [destination]="station.destination">
+  </agm-direction>
+  <!--<agm-marker *ngFor="let station of listStation" [latitude] = "station.lat" [longitude] = "station.lng" label={{station.id}}>-->
+  <!--</agm-marker>-->
 </agm-map>

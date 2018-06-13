@@ -12,7 +12,7 @@
   },
   "private": true,
   "dependencies": {
-    "@agm/core": "^1.0.0-beta.2",
+    "@agm/core": "^1.0.0-beta.3",
     "@agm/snazzy-info-window": "^1.0.0-beta.2",
     "@angular/animations": "^5.2.0",
     "@angular/common": "^5.2.0",
@@ -24,7 +24,7 @@
     "@angular/platform-browser-dynamic": "^5.2.0",
     "@angular/router": "^5.2.0",
     "@ng-bootstrap/ng-bootstrap": "^1.0.2",
-    "agm-direction": "^0.5.1",
+    "agm-direction": "^0.5.4",
     "angular-2-multiple-selection": "^1.0.13",
     "bootstrap": "^4.1.1",
     "bootstrap-select": "^1.12.4",

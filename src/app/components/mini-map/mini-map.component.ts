@@ -12,8 +12,8 @@ export class MiniMapComponent implements OnInit {
   zoomLevel = 13;
 
   @Input() listStation = [
-    {id: 'A', name: 'Gare', lat: 46.8031371, lng: 7.151110700000004, chart: [[1, 2, 3], [12, 10, 15]]},
-    {id: 'B', name: 'Pérolle', lat: 46.79342039999999, lng: 7.159071199999971, chart: [[5, 6, 7], [17, 180, 5]]}
+    {id: 'A', origin: {lat: 46.8031371, lng: 7.151110700000004}, destination: {lat: 46.79342039999999, lng: 7.159071199999971}}
+    // {id: 'B', name: 'Pérolle', lat: 46.79342039999999, lng: 7.159071199999971, chart: [[5, 6, 7], [17, 180, 5]]}
   ]
 
   constructor() { }

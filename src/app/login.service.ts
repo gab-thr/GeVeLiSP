@@ -18,6 +18,8 @@ const users = [
 @Injectable()
 export class LoginService {
 
+  username: string;
+
   constructor(private _router: Router, public nav: NavbarService) { }
 
   login(user) {
@@ -27,12 +29,15 @@ export class LoginService {
       if (authenticatedUser.username === 'chefatelier') {
         this._router.navigate(['/home']);
         this.nav.showCA();
+        this.username = authenticatedUser.username;
       } else if (authenticatedUser.username === 'superuser') {
         this._router.navigate(['/superUserHome']);
         this.nav.showSU();
+        this.username = authenticatedUser.username;
       } else if (authenticatedUser.username === 'velospotter') {
         this._router.navigate(['/velospotterHome']);
         this.nav.showVS();
+        this.username = authenticatedUser.username;
       }
       return true;
     }

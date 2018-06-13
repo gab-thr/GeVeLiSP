@@ -8,5 +8,4 @@ import {LoginFormComponent} from './components/forms/login-form/login-form.compo
 })
 export class AppComponent {
   title = 'app';
-  show =  false;
 }

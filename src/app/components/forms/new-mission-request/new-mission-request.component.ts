@@ -9,22 +9,9 @@ export class NewMissionRequestComponent implements OnInit {
 
 
 
-  @Input() data: any = {
-    listZone: [
-      {name: 'Sélectionner une station'},
-      {name: 'Zone A', value: 'zoneA'},
-      {name: 'Zone B', value: 'zoneB'},
-      {name: 'Zone C', value: 'zoneC'},
-      {name: 'Zone D', value: 'zoneD'}
-    ]
-  };
+  @Input() data;
 
   constructor() { }
-
-  onClickRequest() {
-    /*TODO message confirmation*/
-  }
-
 
   ngOnInit() {
   }

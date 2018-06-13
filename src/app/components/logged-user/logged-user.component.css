@@ -1,0 +1,12 @@
+a {
+  color: #9a9da0;
+  text-decoration: none;
+}
+
+:hover {
+  color: aliceblue;
+}
+
+.col-12 {
+  color: #9a9da0;
+}

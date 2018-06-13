@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { AgmCoreModule } from '@agm/core';
 import { AgmSnazzyInfoWindowModule } from '@agm/snazzy-info-window';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { AgmDirectionModule } from 'agm-direction';
 
 
 // components
@@ -49,6 +50,7 @@ import { NetworkParametersEditPeriodPageComponent } from './pages/network/networ
 import { EditNetworkPeriodParametersComponent } from './components/forms/edit-network-period-parameters/edit-network-period-parameters.component';
 import {LoginService} from './login.service';
 import {NavbarService} from './navbar.service';
+import { LoggedUserComponent } from './components/logged-user/logged-user.component';
 
 
 @NgModule({
@@ -87,7 +89,8 @@ import {NavbarService} from './navbar.service';
     MissionStartComponent,
     MapChartComponent,
     NetworkParametersEditPeriodPageComponent,
-    EditNetworkPeriodParametersComponent
+    EditNetworkPeriodParametersComponent,
+    LoggedUserComponent
   ],
   imports: [
     FormsModule,
@@ -100,7 +103,8 @@ import {NavbarService} from './navbar.service';
     AppRoutingModule,
     MultiSelectModule,
     ChartModule,
-    ResponsiveModule
+    ResponsiveModule,
+    AgmDirectionModule
   ],
   providers: [
     LoginService,

@@ -16,15 +16,16 @@ export class CreateManagerFormComponent implements OnInit {
 
   constructor() { }
 
-  createManager(managerName, email, password, password2) {
-    this.data.push(managerName, email, password, password2)
-    this.managerName = managerName;
-    this.email = email;
-    this.password = password;
-    this.password2 = password2;
-    /*TODO check password et password2 si idem valide création compte*/
-    /*TODO route vers page*/
-  }
+  // createManager(managerName, email, password, password2) {
+  //   this.data.push(managerName, email, password, password2)
+  //   this.managerName = managerName;
+  //   this.email = email;
+  //   this.password = password;
+  //   this.password2 = password2;
+  //   /*TODO check password et password2 si idem valide création compte*/
+  //   /*TODO route vers page*/
+  // }
+
   ngOnInit() {
   }
 
